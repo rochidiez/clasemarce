@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="clase2">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Clase 2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+    <script src="js/clase2.js"></script>
+    <!-- Reemplaza todas las librerías tipo jQuery -->
+    <style>
+    .claseejemplo {
+        background: #000;
+        color: #fff;
+    }
+    </style>
+</head>
+
+<body>
+    <div ng-controller="buscador">
+        <input ng-model="item" type="text" />
+        <button ng-click="buscar()">buscar</button>
+        <!-- para ejecutar una función hay que poner el nombre y () -->
+        {{item}} {{item.length}}
+        <ul>
+            <li ng-repeat="item in resultadosML">
+            	<a href="{{item.permalink}}" target="_blank">{{item.title}}</a><br/>
+                <img src="{{item.thumbnail}}" alt=""/>
+            </li>
+        </ul>
+    </div>
+    <p>/----------------------------------------------/</p>
+    <div ng-controller="home">
+        <h1 ng-if="numeros>5">{{titulo}}</h1>
+        <p>{{numeros}}</p>
+        <button ng-click="sumarnumeros()" ng-class="{claseejemplo:(numeros>3)}">Sumar!</button>
+        <div ng-repeat="item in listado">{{item}}</div>
+        <!-- Me crea un div por cada item del array "listado" -->
+    </div>
+</body>
+
+</html>
+<!--
+NOTAS
+- Angular: https://angularjs.org/
+- No se puede usar angular con jQuery
+- CDN (content delivery network)
+- ng-app = es una directiva. Es lo que conecta un módulo con esa sección del html
+- ng-controller = conecta el controller del js
+- ng-if
+- ng-click
+- ng-class="{claseejemplo:(titulo=='Hola Marce!')}" -> se agrega la clase "claseejemplo" cuando el titulo es igual a "Hola Marce!"
+- {{}} : Para imprimir un controller hay que poner doble llave en cualquier lugar
+
+
+
+TAREAS
+- ng-class  https://docs.angularjs.org/api/ng/directive/ngClass
+
+Crear un html nuevo
+-->

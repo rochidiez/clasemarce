@@ -15,11 +15,13 @@ var suma = function(n, o) {
 var res = suma(2, 3);
 var res2 = suma(4, 2);
 
-
+//DOM --> document. Sirve para interactuar con el códgo html . crear divs, borrar, etc.
+//.querySelector --> busca un elemento
 var divImaginario = document.createElement("div");
 divImaginario.innerHTML = lista[0].nombre;
-//Ese div tiene ese contenido
 
+
+//Ese div tiene ese contenido
 var contenedor = document.querySelector("div.ejemplo");
 contenedor.appendChild(divImaginario);
 
@@ -46,3 +48,19 @@ contenedor.addEventListener("mouseover", function() {
 document.querySelector(".button").addEventListener("click", function() {
 	todo();
 });
+
+/* NOTAS
+Para crear un objeto llamado "objeto" --> var objeto = {}
+
+String = ""
+Array = []
+Función = function(){}
+Objeto = {}
+
+
+
+
+
+
+
+*/
