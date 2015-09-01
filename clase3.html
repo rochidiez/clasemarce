@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="basedatos">
+<head>
+	<meta charset="UTF-8">
+	<title>Clase 3 contentful</title>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/contentful/dist/contentful.js"></script>
+	<script src="js/clase3.js"></script>
+</head>
+<body>
+	<div class="container" ng-controller="blog">
+		<!--{{respuesta}}-->
+		<div ng-repeat="item in respuesta3">
+			{{item.fields.titulo}}
+		</div>
+		
+	</div>
+	
+</body>
+</html>
+
+<!--
+	postman : para probar url de base de datos
+	Bower : para isntalar cualquier libreria!
+	en la consola: bower install nombre --save
+
+TAREA: 
+
+	-->

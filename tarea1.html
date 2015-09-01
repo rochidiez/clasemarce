@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app_search">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tarea 1 :: buscador</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+    <script src="js/tarea1.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/tarea1.css">
+</head>
+
+<body>
+    <div class="container" ng-controller="buscador">
+        <div class="search_column">
+            <div class="search">
+                <input ng-model="item" type="text" name="search" pleaceholder="buscar" />
+                <button ng-click="search()">Buscar</button>
+            </div>
+            <div class="results_list">
+                <ul>
+                    <li ng-repeat="item in resultados">
+                    	<a href="#" ng-click="showDetails(item)">
+                        <div class="thumbnail">
+                            <img src="{{item.thumbnail}}" />
+                        </div>
+                        <div class="description">
+                            <h1>{{item.title}}</h1>
+                            <p>${{item.price}}</p>
+                        </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="results_column" ng-class="{bold:ProductoSeleccionado.price>100}" ng-show="ProductoSeleccionado">
+        	<!-- solo lo va a mostrar cuando existe ProductoSeleccionado -->
+        	<h1>{{ProductoSeleccionado.title}}</h1>
+        	<p>${{ProductoSeleccionado.price}}</p>
+			<img src="{{ProductoSeleccionado.thumbnail}}" />
+        	<!--
+        	{{lista}}
+        	<div class="" ng-repeat="rochi in lista">
+        		ng-repeat="la variable que va a crear in lo que va a repetir" 
+        		<h1>hola</h1> por cada posición del array "lista" imprime un hola
+        		<p>{{rochi}}</p>
+	
+        	</div>
+        -->
+            
+        </div>
+    </div>
+</body>
+
+</html>
