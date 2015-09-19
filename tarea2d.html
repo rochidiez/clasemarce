@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="blog">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tarea 2</title>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/contentful/dist/contentful.js"></script>
+    <script src="js/tarea2d.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/tarea2.css">
+</head>
+
+<body ng-controller="posts">
+	<div class="header">
+                <h1>Blog</h1>
+            </div>
+    <div class="content">
+
+        <div class="lists">
+            
+            <div class="container">
+                <div class="post" ng-repeat="item in postejemplo">
+                    <a href="" ng-click="detallepost(item)">
+                        <h1>{{item.fields.titulo}}</h1>
+                        <p class="fecha">{{item.fields.publicacion}}</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="article" ng-show="article">
+            {{article.fields.post}}
+        </div>
+    </div>
+</body>
+
+</html>

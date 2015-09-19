@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="homework">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tarea2B con la API de mercado libre</title>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/contentful/dist/contentful.js"></script>
+    <script src="js/tarea2b.js"></script>
+</head>
+
+<body>
+    <div class="container" ng-controller="guitars" ng-view>
+        <div class="list" style="width:30%; float:left">
+            <ul>
+                <li ng-repeat="item in resultados">
+                    <a href="#/"  ng-click="details(item)">
+                        <div class="thumbnail">
+                            <img src="{{item.thumbnail}}" />
+                        </div>
+                        <div class="description">
+                            <h1>{{item.title}}</h1>
+                            <p>{{item.price}}</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+		
+
+		
+
+    </div>
+</body>
+
+</html>

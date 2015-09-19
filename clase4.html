@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="router">
+
+<head>
+    <meta charset="UTF-8">
+    <title>router</title>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/contentful/dist/contentful.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="js/clase4.js"></script>
+</head>
+
+<body>
+	<ul>
+		<li ui-sref="publicar">Publicar</li>
+		<li ui-sref="listado">Listado</li>
+	</ul>
+	<!--
+	<div ui-view="contenido">
+	</div>
+
+	<div ui-view="valores">
+	</div>
+-->
+
+	<div ui-view>
+	</div>
+</body>
+
+</html>
+
+

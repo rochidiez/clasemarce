@@ -1,11 +1,3 @@
-angular.module("basedatos",[]);
-angular.module("basedatos").controller("blog",function($scope, $http){
-
-	// var url = "https://cdn.contentful.com/spaces/f3pqce1rhitw/entries?access_token=57f58ed178b581f11721fd074ea6389819c9be228849651aefa469cc738094f7"
-	// $http.get(url).then(function(respuesta){
-	// 	console.log(respuesta);
-	// 	$scope.items = respuesta.data.items;
-	// });
 
 var client = contentful.createClient({
   // ID of Space
@@ -15,6 +7,16 @@ var client = contentful.createClient({
   accessToken: '57f58ed178b581f11721fd074ea6389819c9be228849651aefa469cc738094f7'
 
 });
+
+
+angular.module("basedatos",[]);
+angular.module("basedatos").controller("blog",function($scope, $http){
+
+	// var url = "https://cdn.contentful.com/spaces/f3pqce1rhitw/entries?access_token=57f58ed178b581f11721fd074ea6389819c9be228849651aefa469cc738094f7"
+	// $http.get(url).then(function(respuesta){
+	// 	console.log(respuesta);
+	// 	$scope.items = respuesta.data.items;
+	// });
 
 
 client.entry('4mluesNhni6yk8UyEkIuCc').then(function(res2){

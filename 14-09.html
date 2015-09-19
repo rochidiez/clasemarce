@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <title>14 09</title>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/contentful/dist/contentful.js"></script>
+    <!-- 
+	<script src="js/14-09.js"></script>
+	 -->
+    <script src="js/14-09-ng.js"></script>
+</head>
+
+<body>
+    <div ng-controller="ejemplo">
+        {{postejemplo[0].fields.title}}
+        <div ng-repeat="item in postejemplo">
+            {{item.fields.body}}
+            <div ng-repeat="(a,b) in item.fields">
+            	{{a}}
+            </div>
+        </div>
+        <hr>
+        <div ng-repeat="(k,v) in postejemplo">
+            {{v.fields.date}}
+        </div>
+        <hr>
+        <div ng-repeat="item in lista">
+            {{item}}
+        </div>
+        <hr/>
+        <div ng-repeat="(k,v) in nuevaLista">
+            {{k}}:{{v}}
+            <!-- key y value -->
+        </div>
+    </div>
+</body>
+
+</html>
