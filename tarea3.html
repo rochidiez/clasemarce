@@ -1,7 +1,32 @@
-Probar crear un entry con esta librería nueva
+<!-- Probar crear un entry con esta librería nueva
 https://github.com/contentful/contentful-management.js
 
 buscar $state.go por si necesitamos ir de un estado a otro sin ui-sref. (para hacerlo desde el js directo)
 
 en publicar.html crear un formulario que nos permita publicar un producto en contentful.
-En listado.html listar todos los productos que se cargaron en el form
+En listado.html listar todos los productos que se cargaron en el form -->
+<!DOCTYPE html>
+<html lang="en" ng-app="plani">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tarea 3</title>
+   <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/contentful/dist/contentful.js"></script>
+    <script src="bower_components/contentful-management/dist/contentful-management.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="js/tarea3.js"></script>
+</head>
+
+ <body>
+    <div ng-controller="wendler">
+        <ul>
+            <li ui-sref="publicar">Publicar</li>
+            <li ui-sref="listado">Listado</li>
+        </ul>
+        <div ui-view>
+        </div>
+    </div>
+</body>
+
+</html>
